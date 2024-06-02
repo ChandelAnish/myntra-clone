@@ -17,7 +17,7 @@ const Bag = () => {
         async function fetchingBagItems() {
             dispatch(loadingStatusSliceAction.startloading())
             try {
-                const response = await fetch('http://localhost:5000/bag-items');
+                const response = await fetch(`${import.meta.env.VITE_URL}/bag-items`);
                 const bagItems = await response.json();
                 dispatch(bagItemsAction.addInitialBagItems(bagItems))
             } catch (error) {

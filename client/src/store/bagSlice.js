@@ -11,7 +11,7 @@ const bagItemsSlice = createSlice({
         addToBag: (store,action) => {
             //adding to DB
             const addToBag = async (item) => {
-                const response = await fetch("http://localhost:5000/add-to-bag", {
+                const response = await fetch(`${import.meta.env.VITE_URL}/add-to-bag`, {
                     method: "post",
                     headers: {
                         "Content-type": "application/json"
@@ -26,7 +26,7 @@ const bagItemsSlice = createSlice({
         deleteBagItem: (store, action) => {
             //deleting from DB
             const deleteBagItem = async (id) => {
-                const response = await fetch(`http://localhost:5000/bag-items/${id}`, {
+                const response = await fetch(`${import.meta.env.VITE_URL}/bag-items/${id}`, {
                     method: 'delete',
                     headers: {
                         'Content-Type': 'application/json'

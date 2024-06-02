@@ -7,8 +7,8 @@ const bagAndWishlistMarkerSlice = createSlice({
         markbag: (store, action) => {
             const {item,mark}=action.payload;
             // console.log("from slice : ",mark,item._id)
-            const wishlistItem = async (item) => {
-                const response = await fetch(`http://localhost:5000/items/${item._id}`, {
+            const markAddedBagItem = async (item) => {
+                const response = await fetch(`${import.meta.env.VITE_URL}/items/${item._id}`, {
                     method: 'PATCH',
                     headers: {
                         "Content-type": "application/json"
@@ -18,7 +18,7 @@ const bagAndWishlistMarkerSlice = createSlice({
                 const data = await response.json();
                 // console.log(data);
             }
-            wishlistItem(item)
+            markAddedBagItem(item)
             return null;
         }
     }

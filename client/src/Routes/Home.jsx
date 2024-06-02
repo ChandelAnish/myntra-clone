@@ -17,7 +17,7 @@ const Home = () => {
     async function fetchingItems() {
       dispatch(loadingStatusSliceAction.startloading())
       try {
-        const response = await fetch('http://localhost:5000/items');
+        const response = await fetch(`${import.meta.env.VITE_URL}/items`);
         const items = await response.json();
         dispatch(itemsActions.addInitialItems(items));
       } catch (error) {
