@@ -18,7 +18,7 @@ const start = async () => {
             console.log('server connected to PORT 5000 and DB')
         })
     } catch (error) {
-        console.log("error occured : ",error)
+        console.log("error occurred : ",error)
     }
 }
 start();
