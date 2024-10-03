@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-// const connectionString ="mongodb+srv://anish8427singhchandel:842799@myntra-cluster.oo9kwdh.mongodb.net/myntra-DB?retryWrites=true&w=majority&appName=myntra-Cluster"
+// const connectionString ="mongodb+srv://anuj:1234@cluster0.0hqyp.mongodb.net/myntra?retryWrites=true&w=majority"
 
 const connectDB=(url)=>{
     return mongoose.connect(url)
