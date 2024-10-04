@@ -9,7 +9,7 @@ const User = () => {
 
     return (
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 float-end">
-            <li><Link className="user-li" to="#"><SlUser />User</Link></li>
+            <li><Link className="user-li" to="/login"><SlUser />User</Link></li>
             <li><Link className="user-li" to="#"><IoIosHeartEmpty />Wishlist</Link></li>
             <li><Link className="user-li position-relative" to="/bag"><BsHandbag />
                 Bag
