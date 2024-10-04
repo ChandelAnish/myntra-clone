@@ -222,20 +222,18 @@
 .container img{
     object-fit: cover;
     height: 145px;
-}
+} 
 
-.container h3{
+.sub p{
     display: flex;
     align-items: center;
+    justify-content: left;
     color: grey;
     margin-top: 10px;
 }
 
-.container h3 p{    
-    color: black;
+strong{
     margin-right: 5px;
-    font-style: bold;
-    font-size: 17px;
 }
 
 .signup{
@@ -261,7 +259,7 @@
 .container p{
     margin-top: 10px;
     margin-bottom: 10px;
-    align-self: center;
+    align-self: left;
 }
 
 .container button{
