@@ -33,13 +33,25 @@
     align-items: center;
     text-align: center;
 
+
 }
 
-    
+.navbar-nav li {
+    border-bottom: 2px solid rgb(208, 191, 191);
+    justify-content: center;
+    display: flex;
+    width: 70%;
+}
+
 
 .navbar-nav li:hover {
+    border-bottom: 2px solid black;
 
-    background: #000;
+}
+
+.navbar-nav li:not(:hover) {
+    border-bottom: 2px solid rgb(211, 193, 193);
+
 }
 
 .user-icon {
