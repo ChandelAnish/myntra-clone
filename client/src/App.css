@@ -30,7 +30,16 @@
 .navbar-nav {
     display: flex;
     margin-top: 0.5vw;
-    align-items: flex-end;
+    align-items: center;
+    text-align: center;
+
+}
+
+    
+
+.navbar-nav li:hover {
+
+    background: #000;
 }
 
 .user-icon {
