@@ -7,13 +7,15 @@ import Bag from './Routes/Bag.jsx'
 import Home from './Routes/Home.jsx'
 import { Provider } from 'react-redux'
 import myntraStore from './store/index.js'
+import Login from './components/Login.jsx'
 
 const router = createBrowserRouter([{
   path: "/",
   element: <App />,
   children: [
     { path: "/", element: <Home />},
-    { path: "/bag", element: <Bag /> }
+    { path: "/bag", element: <Bag /> },
+    {path: "/login", element: <Login />}
   ]
 }])
 
