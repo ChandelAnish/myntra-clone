@@ -1,6 +1,6 @@
 const express=require('express')
 const router=express.Router();
-const {getInitialItems,getBagItems,addItems,addToBag,deleteFormBag,updateItem} = require('../controllers/items')
+const {getInitialItems,getBagItems,addItems,addToBag,deleteFromBag,updateItem, searchItems} = require('../controllers/items')
 
 //initial items
 router.get('/items', getInitialItems)
@@ -18,6 +18,7 @@ router.post('/add-items', addItems)
 router.post('/add-to-bag', addToBag)
 
 //delete and update from bag
-router.route("/bag-items/:id").delete(deleteFormBag)
-
+router.delete('/bag/:id', deleteFromBag); 
+// search items
+router.get('/api/items/search', searchItems)
 module.exports = {router};
